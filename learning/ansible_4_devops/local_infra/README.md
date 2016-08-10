@@ -18,9 +18,10 @@ sudo apt-get install virtualbox-5.1
 sudo apt-get install dkms
 ```
 
-## Download a Vagrant Box
+## Download and initialise a Vagrant Box
 ```
 vagrant box add geerlingguy/centos7
+vagrant init geerlingguy/centos7
 ```
 
 [Vagrant]: https://www.vagrantup.com
