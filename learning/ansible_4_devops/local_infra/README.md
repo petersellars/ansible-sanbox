@@ -24,5 +24,23 @@ vagrant box add geerlingguy/centos7
 vagrant init geerlingguy/centos7
 ```
 
+## Running Ansible on Vagrant Box
+Once you have the Vagrant box above downloaded and initialised you can run an [Ansible] playbook
+
+### Simple Vagrant Configuration for [Ansible]
+```
+config.vm.provision "ansible" do | ansible |
+  ansible.playbook = "playbook.yml"
+end
+```
+
+The [VagrantFile](./VagrantFile) contained in this folder can be used with [playbook.yml](./playbook.yml)
+
+```
+vagrant up
+vagrant provision
+```
+
+[Ansible]: https://www.ansible.com/
 [Vagrant]: https://www.vagrantup.com
 [VirtualBox]: https://www.virtualbox.org/
