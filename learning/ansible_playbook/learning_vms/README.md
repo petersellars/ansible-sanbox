@@ -16,3 +16,26 @@ vagrant up <node>
 ```
 vagrant ssh <node>
 ```
+
+## No Provision/Provision
+```
+vagrant up --no-provision <node> 
+vagrant provision <node> --provision-with shell
+```
+
+## Check Status
+```
+vagrant status
+
+Current machine states:
+
+control                  running (virtualbox)
+db                       not created (virtualbox)
+dbel                     not created (virtualbox)
+www                      not created (virtualbox)
+lb                       not created (virtualbox)
+
+This environment represents multiple VMs. The VMs are all listed
+above with their current state. For more information about a specific
+VM, run `vagrant status NAME`.
+```
