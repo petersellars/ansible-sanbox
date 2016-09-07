@@ -28,3 +28,8 @@ Check the disk space on all hosts
 ```
 ansible -i hosts multi -a "df -h"
 ```
+
+Check the memory on all hosts
+```
+ansible -i hosts multi -a "free -m"
+```
