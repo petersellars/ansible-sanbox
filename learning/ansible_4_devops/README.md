@@ -10,3 +10,8 @@ File containing a list of servers for Ansible to communicate with. Matches serve
 
 ## Ad-hoc Commands
 Ansible assumes passwordless (key-based) login for SSH. If you still use passwords add the `--ask-pass (-k)` flag to Ansible commands. Better still set up passwordless login!
+
+### Folders
+
+* [local_infra](./local_infra) - Simple Playbook with Vagrant
+* [ad_hoc](./ad_hoc) - Multi Vagrant machines
