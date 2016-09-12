@@ -33,3 +33,18 @@ Check the memory on all hosts
 ```
 ansible -i hosts multi -a "free -m"
 ```
+
+Check the date and time on each server is in sync
+```
+ansible -i hosts multi -a "date"
+```
+
+Get an exhaustive list of all the environment details ('fact')
+```
+ansible -i hosts multi -m setup
+```
+
+## Ad-Hoc Commands in Script File
+Take a look at [ad-hoc.sh](./ad-hoc.sh) to see other ad-hoc commands. This can be run too to update the virtual machines in the Vagrantfile in this directory. There are ad-hoc commands to:
+* Install the NTP daemon, ensure it is stated and synchronise servers to the official time on the NTP server
+* Install Django on the Application Servers
