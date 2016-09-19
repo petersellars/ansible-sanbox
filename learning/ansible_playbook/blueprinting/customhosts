@@ -1,0 +1,10 @@
+# customhosts
+# inventory configs for my cluster
+[db]
+192.168.61.11 ansible_ssh_user=vagrant
+
+[www]
+192.168.61.12 ansible_ssh_user=vagrant
+
+[lb]
+192.168.61.13 ansible_ssh_user=vagrant

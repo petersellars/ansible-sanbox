@@ -3,3 +3,4 @@ This folder contains examples based on those in [Ansible Playbook Essentials](ht
 
 ## Contents
 * [learning_vms](./learning_vms): Vagrant based VMs for learning Ansible
+* [blueprinting](./blueprinting): Introduction to Playbooks
