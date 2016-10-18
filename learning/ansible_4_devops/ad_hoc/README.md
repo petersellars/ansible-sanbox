@@ -48,3 +48,5 @@ ansible -i hosts multi -m setup
 Take a look at [ad-hoc.sh](./ad-hoc.sh) to see other ad-hoc commands. This can be run too to update the virtual machines in the Vagrantfile in this directory. There are ad-hoc commands to:
 * Install the NTP daemon, ensure it is stated and synchronise servers to the official time on the NTP server
 * Install Django on the Application Servers
+* Manage users and groups
+* Manage files and directories

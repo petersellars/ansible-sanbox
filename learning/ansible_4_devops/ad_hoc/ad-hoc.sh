@@ -41,3 +41,22 @@ ansible -i hosts app -s -a "service ntpd restart" --limit "192.168.60.4"
 ansible -i hosts app -s -a "service ntpd restart" --limit "*.4"
 # Limit hosts with a regular expression (prefix with a tilde)
 ansible -i hosts app -s -a "service ntpd restart" --limit ~".*\.4"
+
+# Manage users and groups
+ansible -i hosts app -s -m group -a "name=admin state=present"
+ansible -i hosts app -s -m user -a "name=johndoe group=admin createhome=yes"
+ansible -i hosts app -s -m user -a "name=johndoe state=absent remove=yes"
+
+# Manage files and directories
+ansible -i hosts multi -m stat -a "path=/etc/environment"
+ansible -i hosts multi -m copy -a "src=/etc/hosts dest=/tmp/hosts"
+ansible -i hosts multi -s -m fetch -a "src=/etc/hosts dest=/tmp"
+ansible -i hosts multi -m file -a "dest=/tmp/test mode=644 state=directory"
+#ansible -i hosts multi -m file -a "src=/src/symlink dest=/dest/symlink \
+#  owner=root group=root state=link"
+ansible -i hosts multi -m file -a "dest=/tmp/test state=absent"
+
+# TIDY UP
+
+# Remove downloaded host files
+rm -Rf /tmp/192.168.60.*
